@@ -1,10 +1,10 @@
 import { InputWithButton } from "@/components/ui/inputWithButton";
-import { Tag, Tags } from "lucide-react";
+import { CircleCheck, Tag, Tags } from "lucide-react";
 
 export const LargeShopSummary = () => {
   return (
-    <div className="relative w-full bg-muted px-1">
-      <div className="mt-4 flex  flex-col gap-4 lg:gap-6">
+    <div className="relative w-full bg-muted px-1 lg:p-5">
+      <div className="mt-4 flex  flex-col gap-4 lg:max-w-md lg:gap-6">
         <div className="relative flex flex-row items-center justify-center gap-2 text-sm">
           <ImgProductWithQuantity />
           <p>AC Adapter - 65W | Slim | Carbide</p>
@@ -45,6 +45,24 @@ export const LargeShopSummary = () => {
             <Tags className="mr-2 inline" size={16} />
             TOTAL SAVINGS €7.50
           </p>
+        </div>
+        <div className="hidden text-sm lg:flex lg:w-full lg:flex-col lg:gap-6">
+          <div className=" flex flex-row items-center justify-start gap-2 rounded-md border border-green-300 bg-green-200/30 p-5">
+            <CircleCheck size={20} className=" text-green-800/90" />
+            <p>Duties and Taxes Paid</p>
+          </div>
+          <div className=" flex flex-row items-start justify-start gap-2 rounded-md border border-green-300 bg-green-200/30 p-5">
+            <CircleCheck size={20} className="shrink-0 text-green-800" />
+
+            <div className="flex flex-col gap-2 ">
+              <p className="font-semibold">Returns & Warranty Coverage</p>
+              <p>
+                Enjoy easy returns and 2-year warranty coverage on everything!
+                Orders placed by December 31, 2024, can be returned until
+                January 31, 2025.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
