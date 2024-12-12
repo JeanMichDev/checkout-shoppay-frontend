@@ -5,7 +5,7 @@ import { CircleHelp } from "lucide-react";
 
 export const ContactAndDeliveryForm = () => {
   return (
-    <div className="flex w-full max-w-xl flex-col items-start justify-center gap-6 border border-red-500 px-5 lg:max-w-4xl lg:px-5">
+    <div className="flex w-full max-w-xl flex-col items-start justify-center gap-6 border border-red-500 px-5 lg:max-w-2xl lg:px-5">
       <h2 className="flex w-full items-baseline">
         <Label htmlFor="emailId" className=" text-xl  font-semibold">
           Contact
@@ -30,6 +30,30 @@ export const ContactAndDeliveryForm = () => {
         </Label>
       </div>
       <h2 className="text-xl font-semibold">Delivery</h2>
+      <InputsForDelivery />
+    </div>
+  );
+};
+
+export const InputPhone = () => {
+  return (
+    <div className="relative w-full">
+      <Input
+        placeholder="Phone"
+        type="text"
+        className=" ring-black ring-offset-0 focus:outline-none focus:ring-1"
+      />
+      <CircleHelp
+        size={16}
+        className="absolute right-4 top-4 text-muted-foreground"
+      />
+    </div>
+  );
+};
+
+export const InputsForDelivery = () => {
+  return (
+    <>
       <Input
         placeholder="Country"
         type="text"
@@ -66,22 +90,6 @@ export const ContactAndDeliveryForm = () => {
         className="ring-black ring-offset-0 focus:outline-none focus:ring-1"
       />
       <InputPhone />
-    </div>
-  );
-};
-
-export const InputPhone = () => {
-  return (
-    <div className="relative w-full">
-      <Input
-        placeholder="Phone"
-        type="text"
-        className=" ring-black ring-offset-0 focus:outline-none focus:ring-1"
-      />
-      <CircleHelp
-        size={16}
-        className="absolute right-4 top-4 text-muted-foreground"
-      />
-    </div>
+    </>
   );
 };

@@ -37,12 +37,12 @@ export const DiscountedItem = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-row items-center justify-start border border-red-500 gap-4",
+        "flex w-full flex-row items-center justify-start  gap-4",
         className
       )}
     >
       <img src={imgUrl} alt={itemName} className="size-20 rounded-md" />
-      <div className=" flex min-w-20 flex-1 flex-col items-start justify-start border border-green-500 ">
+      <div className=" flex min-w-20 flex-1 flex-col items-start justify-start ">
         <div className="flex  flex-row items-center justify-center ">
           {notationArray.map((notation, i) => (
             <img

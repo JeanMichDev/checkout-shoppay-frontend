@@ -16,7 +16,7 @@ export const AccordionPhoneNumer = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "w-full max-w-xl  border px-5 lg:max-w-4xl lg:px-5 border-yellow-600 ",
+        "w-full max-w-xl  border px-5 lg:max-w-2xl lg:px-5 ",
         className
       )}
     >

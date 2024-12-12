@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export const ExpressCheckout = () => {
   return (
-    <div className="flex w-full max-w-xl flex-col items-center justify-center gap-6 border border-red-500 px-5 lg:max-w-4xl lg:px-5">
+    <div className="flex w-full max-w-xl flex-col items-center justify-center gap-6 border border-red-500 px-5 lg:max-w-2xl lg:px-5">
       <p className="text-sm text-muted-foreground">Express Checkout</p>
       <div className=" flex w-full flex-row items-center  justify-center gap-2  lg:gap-4">
         <span

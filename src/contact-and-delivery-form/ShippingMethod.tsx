@@ -11,7 +11,7 @@ export const ShippingMethod = ({ className }: { className?: string }) => {
 
   return (
     <RadioGroup
-      defaultValue="comfortable"
+      defaultValue="standard"
       onValueChange={() =>
         shippingOption === "standard"
           ? setShippingOption("fast")
@@ -19,7 +19,7 @@ export const ShippingMethod = ({ className }: { className?: string }) => {
       }
       className={cn(
         className,
-        "w-full max-w-xl  border border-green-500 px-5 lg:max-w-4xl lg:px-5"
+        "w-full flex flex-col gap-0 max-w-xl px-5 lg:max-w-2xl lg:px-5"
       )}
     >
       <Label className="text-xl font-semibold">Shipping method</Label>

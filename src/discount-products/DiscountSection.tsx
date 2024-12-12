@@ -2,9 +2,9 @@ import { DiscountedItem } from "./DiscountedItem";
 
 export const DiscountSection = () => {
   return (
-    <div className="flex w-full max-w-xl flex-col items-start justify-center gap-2 border border-cyan-500 px-5 lg:max-w-4xl lg:px-5">
+    <div className="flex w-full max-w-xl flex-col items-start justify-center gap-2 border border-cyan-500 px-5 lg:max-w-2xl lg:px-5">
       <h2 className=" text-xl  font-semibold"> Highly Discounted Cables</h2>
-      <div className="flex w-full flex-col items-start justify-start  gap-4 border p-2">
+      <div className="flex w-full flex-col items-start justify-start rounded-md gap-4 border p-2">
         <DiscountedItem
           itemName="0.3M | USB-C"
           price={25}
