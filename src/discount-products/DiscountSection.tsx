@@ -1,10 +1,16 @@
+import { cn } from "@/lib/utils";
 import { DiscountedItem } from "./DiscountedItem";
 
-export const DiscountSection = () => {
+export const DiscountSection = ({ className }: { className?: string }) => {
   return (
-    <div className="flex w-full max-w-xl flex-col items-start justify-center gap-2 border border-cyan-500 px-5 lg:max-w-2xl lg:px-5">
+    <div
+      className={cn(
+        " flex w-full max-w-xl flex-col items-start justify-center gap-4  px-5 lg:max-w-3xl lg:px-5",
+        className
+      )}
+    >
       <h2 className=" text-xl  font-semibold"> Highly Discounted Cables</h2>
-      <div className="flex w-full flex-col items-start justify-start rounded-md gap-4 border p-2">
+      <div className="flex w-full flex-col items-start justify-start gap-4 rounded-md border p-2">
         <DiscountedItem
           itemName="0.3M | USB-C"
           price={25}

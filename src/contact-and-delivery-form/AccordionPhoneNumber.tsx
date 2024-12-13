@@ -14,15 +14,10 @@ export const AccordionPhoneNumer = ({ className }: { className?: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      className={cn(
-        "w-full max-w-xl  border px-5 lg:max-w-2xl lg:px-5 ",
-        className
-      )}
-    >
+    <div className={cn("w-full max-w-xl px-5 lg:max-w-3xl ", className)}>
       <Accordion
         type="single"
-        className="m-auto max-w-xl  px-4"
+        className="max-w-xl"
         collapsible
         onValueChange={() => setIsOpen(!isOpen)}
       >

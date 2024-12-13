@@ -1,11 +1,16 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
 import { CircleHelp } from "lucide-react";
 
-export const ContactAndDeliveryForm = () => {
+export const ContactAndDeliveryForm = ({
+  className,
+}: {
+  className?: string;
+}) => {
   return (
-    <div className="flex w-full max-w-xl flex-col items-start justify-center gap-6 border border-red-500 px-5 lg:max-w-2xl lg:px-5">
+    <div className={cn("flex w-full max-w-xl flex-col items-start justify-center gap-4  px-5 lg:max-w-3xl lg:px-5",className)}>
       <h2 className="flex w-full items-baseline">
         <Label htmlFor="emailId" className=" text-xl  font-semibold">
           Contact

@@ -13,12 +13,10 @@ export const AccordionShopSummary = ({ className }: { className?: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      className={cn("w-screen bg-muted border border-green-600 ", className)}
-    >
+    <div className={cn("w-screen bg-muted ", className)}>
       <Accordion
         type="single"
-        className="m-auto max-w-xl border border-purple-500 px-4"
+        className="m-auto max-w-xl px-4"
         collapsible
         onValueChange={() => setIsOpen(!isOpen)}
       >
@@ -42,7 +40,7 @@ export const AccordionShopSummary = ({ className }: { className?: string }) => {
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            <LargeShopSummary />
+            <LargeShopSummary isFooterDisplayed={false} />
           </AccordionContent>
         </AccordionItem>
       </Accordion>
