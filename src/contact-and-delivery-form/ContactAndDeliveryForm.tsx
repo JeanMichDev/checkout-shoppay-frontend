@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { CircleHelp } from "lucide-react";
+import { AccordionPhoneNumer } from "./AccordionPhoneNumber";
 
 export const ContactAndDeliveryForm = ({
   className,
@@ -10,7 +11,12 @@ export const ContactAndDeliveryForm = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex w-full max-w-xl flex-col items-start justify-center gap-4  px-5 lg:max-w-3xl lg:px-5",className)}>
+    <div
+      className={cn(
+        "flex w-full max-w-xl flex-col items-start justify-center gap-4  px-5 lg:max-w-3xl lg:px-5",
+        className
+      )}
+    >
       <h2 className="flex w-full items-baseline">
         <Label htmlFor="emailId" className=" text-xl  font-semibold">
           Contact
@@ -58,7 +64,7 @@ export const InputPhone = () => {
 
 export const InputsForDelivery = () => {
   return (
-    <>
+    <div className="flex w-full flex-col gap-2">
       <Input
         placeholder="Country"
         type="text"
@@ -95,6 +101,7 @@ export const InputsForDelivery = () => {
         className="ring-black ring-offset-0 focus:outline-none focus:ring-1"
       />
       <InputPhone />
-    </>
+      <AccordionPhoneNumer />
+    </div>
   );
 };

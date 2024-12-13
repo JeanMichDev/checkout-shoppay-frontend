@@ -14,7 +14,7 @@ export const AccordionPhoneNumer = ({ className }: { className?: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={cn("w-full max-w-xl px-5 lg:max-w-3xl ", className)}>
+    <div className={cn("w-full max-w-xl lg:max-w-3xl ", className)}>
       <Accordion
         type="single"
         className="max-w-xl"
@@ -22,7 +22,7 @@ export const AccordionPhoneNumer = ({ className }: { className?: string }) => {
         onValueChange={() => setIsOpen(!isOpen)}
       >
         <AccordionItem value="item-1">
-          <AccordionTrigger className=" px-1">
+          <AccordionTrigger className=" px-1" asChild>
             <div className="flex items-center space-x-2">
               <Checkbox id="phoneOffers" checked={isOpen} />
               <Label
@@ -33,10 +33,10 @@ export const AccordionPhoneNumer = ({ className }: { className?: string }) => {
               </Label>
             </div>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="p-1">
             <Input
-              placeholder="City"
-              type="text"
+              placeholder="Phone number"
+              type="number"
               className="ring-black ring-offset-0 focus:outline-none focus:ring-1"
             />
             <p className="mt-2">

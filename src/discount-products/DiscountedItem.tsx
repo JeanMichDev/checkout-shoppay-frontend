@@ -41,7 +41,7 @@ export const DiscountedItem = ({
         className
       )}
     >
-      <img src={imgUrl} alt={itemName} className="size-20 rounded-md" />
+      <img src={imgUrl} alt={itemName} className="size-20 rounded-md border " />
       <div className=" flex min-w-20 flex-1 flex-col items-start justify-start ">
         <div className="flex  flex-row items-center justify-center ">
           {notationArray.map((notation, i) => (
@@ -74,7 +74,7 @@ export const DiscountedItem = ({
           <p className="text-sm font-medium">€{price}</p>
         )}
       </div>
-      <button className=" rounded-md border bg-muted px-2 py-4 text-sm text-muted-foreground hover:bg-muted/60">
+      <button className=" rounded-md border bg-muted px-2 py-4 text-sm text-muted-foreground transition hover:bg-muted-foreground/20">
         Add to order
       </button>
     </div>

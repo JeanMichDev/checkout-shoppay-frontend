@@ -27,7 +27,7 @@ export function InputWithButton({
       />
       <Button
         type="submit"
-        className="bg-accent px-2 py-6 text-muted-foreground hover:bg-accent/80 "
+        className="bg-accent px-2 py-6 text-muted-foreground transition hover:bg-muted-foreground/20 "
       >
         {buttonName}
       </Button>

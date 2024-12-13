@@ -101,7 +101,7 @@ export const PaymentSection = ({ className }: { className?: string }) => {
               }
             >
               <AccordionItem value="item-1">
-                <AccordionTrigger>
+                <AccordionTrigger asChild>
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="billingAdress"
@@ -116,7 +116,7 @@ export const PaymentSection = ({ className }: { className?: string }) => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="flex w-full flex-col items-center justify-center gap-4  transition">
+                  <div className="flex w-full flex-col items-center justify-center gap-4 p-1 transition">
                     <InputsForDelivery />
                   </div>
                 </AccordionContent>

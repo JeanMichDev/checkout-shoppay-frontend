@@ -9,15 +9,15 @@ export const OrderSummary = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <h2 className=" text-2xl  font-semibold">Order summary</h2>
+      <h2 className=" text-2xl  font-semibold lg:hidden">Order summary</h2>
       <LargeShopSummary
         isFooterDisplayed={false}
-        className="w-full bg-background"
+        className="w-full bg-background lg:hidden"
       />
       <button className="mt-4 w-full rounded-md bg-black py-2 text-2xl text-white hover:bg-black/90">
         Pay now
       </button>
-      <p>
+      <p className="text-base text-muted-foreground">
         Your info will be saved to a Shop account. By continuing, you agree to
         Shop’s Terms of Service and acknowledge the Privacy Policy.
       </p>
