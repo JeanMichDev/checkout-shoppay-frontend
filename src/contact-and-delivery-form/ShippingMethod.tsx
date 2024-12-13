@@ -19,10 +19,10 @@ export const ShippingMethod = ({ className }: { className?: string }) => {
       }
       className={cn(
         className,
-        "w-full flex flex-col gap-0 max-w-xl px-5 lg:max-w-2xl lg:px-5"
+        "w-full flex flex-col gap-0 max-w-xl px-5 lg:max-w-3xl"
       )}
     >
-      <Label className="text-xl font-semibold">Shipping method</Label>
+      <Label className="mb-4 text-xl font-semibold">Shipping method</Label>
       <div
         className={cn(
           "w-full flex items-start justify-start rounded-t-md p-3 transition space-x-2",

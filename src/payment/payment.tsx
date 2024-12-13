@@ -22,7 +22,12 @@ export const PaymentSection = ({ className }: { className?: string }) => {
   const [isBillingAdressChecked, setIsBillingAdressChecked] = useState(true);
 
   return (
-    <div className="flex w-full max-w-xl flex-col items-start justify-center gap-2 border border-cyan-500 px-5 lg:max-w-2xl lg:px-5">
+    <div
+      className={cn(
+        "flex w-full max-w-xl flex-col items-start justify-start gap-4 px-5 lg:max-w-3xl ",
+        className
+      )}
+    >
       <h2 className=" text-2xl  font-semibold">Payment</h2>
       <p className="text-base text-muted-foreground">
         All transactions are secure and encrypted
@@ -30,10 +35,7 @@ export const PaymentSection = ({ className }: { className?: string }) => {
       <RadioGroup
         defaultValue="creditCard"
         onValueChange={(value) => setPaymentMethod(value as PaymentMethod)}
-        className={cn(
-          className,
-          "w-full flex flex-col gap-0 max-w-xl px-5 lg:max-w-2xl lg:px-5"
-        )}
+        className={cn("w-full flex flex-col gap-0 ")}
       >
         <div
           className={cn(
@@ -152,7 +154,7 @@ export const PaymentSection = ({ className }: { className?: string }) => {
         ) : null}
         <div
           className={cn(
-            "flex items-start justify-start rounded-b-md p-3 transition  space-x-2",
+            "flex items-center justify-start rounded-b-md p-3 transition  space-x-2",
             paymentMethod === "shopPay"
               ? "border border-muted-foreground bg-muted"
               : "border "

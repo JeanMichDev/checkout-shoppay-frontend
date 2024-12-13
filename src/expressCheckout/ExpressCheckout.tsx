@@ -1,9 +1,14 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export const ExpressCheckout = () => {
+export const ExpressCheckout = ({ className }: { className?: string }) => {
   return (
-    <div className="flex w-full max-w-xl flex-col items-center justify-center gap-6 border border-red-500 px-5 lg:max-w-2xl lg:px-5">
+    <div
+      className={cn(
+        " flex w-full max-w-xl flex-col items-center justify-center gap-6 px-5 lg:max-w-3xl ",
+        className
+      )}
+    >
       <p className="text-sm text-muted-foreground">Express Checkout</p>
       <div className=" flex w-full flex-row items-center  justify-center gap-2  lg:gap-4">
         <span
